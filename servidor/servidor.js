@@ -40,7 +40,8 @@ app.get("/generos", controlador.obtenerGeneros);
 app.get("/directores", controlador.obtenerDirectores);
 
 app.get("/actores", controlador.obtenerActores);
-var puerto = '8080';
+
+var puerto = process.env.PORT || '8080';
 
 app.listen(puerto, function () {
   console.log( "Escuchando en el puerto " + puerto );
